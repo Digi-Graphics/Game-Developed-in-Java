@@ -1,0 +1,37 @@
+{
+  "name": "take-the-sky",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "moo": "^0.5.0",
+    "nearley": "^2.16.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "1.16.4",
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-terser": "^4.0.4"
+  },
+  "scripts": {
+    "start": "npm run watch & npm run serve",
+    "serve": "http-server public",
+    "build": "rollup --config rollup.config.js",
+    "watch": "rollup --watch --config rollup.config.js",
+    "lint": "eslint src",
+    "compile-grammar": "nearleyc src/parser/grammar.ne -o src/parser/grammar.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintIgnore": ["src/parser/*"],
+  "author": "Payton Swick <payton@foolord.com>",
+  "license": "MIT"
+}
